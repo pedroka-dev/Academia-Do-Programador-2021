@@ -18,3 +18,17 @@ InventoryControl/InventoryControl/obj/InventoryControl.csproj.nuget.g.props
 InventoryControl/InventoryControl/obj/InventoryControl.csproj.nuget.g.targets
 InventoryControl/InventoryControl/obj/project.assets.json
 InventoryControl/InventoryControl/obj/project.nuget.cache
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.AssemblyInfo.cs
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.AssemblyInfoInputs.cache
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.assets.cache
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.csproj.CoreCompileInputs.cache
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.csproj.FileListAbsolute.txt
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.pdb
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.dll
+InventoryControl/InventoryControlModel/obj/Debug/netcoreapp3.1/InventoryControlModel.csprojAssemblyReference.cache
+InventoryControl/InventoryControlModel/obj/InventoryControlModel.csproj.nuget.dgspec.json
+InventoryControl/InventoryControlModel/obj/InventoryControlModel.csproj.nuget.g.props
+InventoryControl/InventoryControlModel/obj/InventoryControlModel.csproj.nuget.g.targets
+InventoryControl/InventoryControlModel/obj/project.assets.json
+InventoryControl/InventoryControlModel/obj/project.nuget.cache
