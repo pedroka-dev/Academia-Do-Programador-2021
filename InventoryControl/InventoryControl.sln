@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryControl", "InventoryControl\InventoryControl.csproj", "{341A2F63-2126-43D5-B31C-FD568CB9543E}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryControlModel", "InventoryControlModel\InventoryControlModel.csproj", "{42AFAFE3-553C-416A-A0AC-24D41D86D00B}"
 EndProject
 Global
