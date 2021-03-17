@@ -10,9 +10,20 @@ namespace InventoryControlModel
         private DateTime manufacturingDate;
         private string manufacturerName;
 
-        public string EquipmentName {
+        public Equipment(string equipmentName, float acquisitionPrice, string serialNumber, DateTime manufacturingDate, string manufacturerName)
+        {
+            EquipmentName = equipmentName;
+            AcquisitionPrice = acquisitionPrice;
+            SerialNumber = serialNumber;
+            ManufacturingDate = manufacturingDate;
+            ManufacturerName = manufacturerName;
+        }
+
+        public string EquipmentName
+        {
             get { return equipmentName; }
-            set {
+            set
+            {
                 if (value.Length < 6)
                     throw new ArgumentException("EquipmentName property has a minimun lenght of 6.");
                 equipmentName = value;
