@@ -94,6 +94,7 @@ namespace InventoryControl
             this.buttonEditEquipment.TabIndex = 4;
             this.buttonEditEquipment.Text = "Editar";
             this.buttonEditEquipment.UseVisualStyleBackColor = true;
+            this.buttonEditEquipment.Click += new System.EventHandler(this.buttonEditEquipment_Click);
             // 
             // buttonDeleteEquipment
             // 
@@ -104,6 +105,7 @@ namespace InventoryControl
             this.buttonDeleteEquipment.TabIndex = 3;
             this.buttonDeleteEquipment.Text = "Excluir";
             this.buttonDeleteEquipment.UseVisualStyleBackColor = true;
+            this.buttonDeleteEquipment.Click += new System.EventHandler(this.buttonDeleteEquipment_Click);
             // 
             // buttonAddEquipment
             // 
@@ -114,12 +116,18 @@ namespace InventoryControl
             this.buttonAddEquipment.TabIndex = 2;
             this.buttonAddEquipment.Text = "Adicionar";
             this.buttonAddEquipment.UseVisualStyleBackColor = true;
+            this.buttonAddEquipment.Click += new System.EventHandler(this.buttonAddEquipment_Click);
             // 
             // dataGridViewEquipament
             // 
+            this.dataGridViewEquipament.AllowUserToAddRows = false;
+            this.dataGridViewEquipament.AllowUserToDeleteRows = false;
+            this.dataGridViewEquipament.AllowUserToResizeColumns = false;
+            this.dataGridViewEquipament.AllowUserToResizeRows = false;
             this.dataGridViewEquipament.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEquipament.Location = new System.Drawing.Point(11, 26);
             this.dataGridViewEquipament.Name = "dataGridViewEquipament";
+            this.dataGridViewEquipament.ReadOnly = true;
             this.dataGridViewEquipament.RowHeadersWidth = 51;
             this.dataGridViewEquipament.RowTemplate.Height = 29;
             this.dataGridViewEquipament.Size = new System.Drawing.Size(683, 339);
@@ -158,6 +166,7 @@ namespace InventoryControl
             this.buttonEditMaintanceCall.TabIndex = 4;
             this.buttonEditMaintanceCall.Text = "Editar";
             this.buttonEditMaintanceCall.UseVisualStyleBackColor = true;
+            this.buttonEditMaintanceCall.Click += new System.EventHandler(this.buttonEditMaintanceCall_Click);
             // 
             // buttonDeleteMaintanceCall
             // 
@@ -168,6 +177,7 @@ namespace InventoryControl
             this.buttonDeleteMaintanceCall.TabIndex = 3;
             this.buttonDeleteMaintanceCall.Text = "Excluir";
             this.buttonDeleteMaintanceCall.UseVisualStyleBackColor = true;
+            this.buttonDeleteMaintanceCall.Click += new System.EventHandler(this.buttonDeleteMaintanceCall_Click);
             // 
             // buttonAddMaintanceCall
             // 
@@ -178,12 +188,18 @@ namespace InventoryControl
             this.buttonAddMaintanceCall.TabIndex = 2;
             this.buttonAddMaintanceCall.Text = "Adicionar";
             this.buttonAddMaintanceCall.UseVisualStyleBackColor = true;
+            this.buttonAddMaintanceCall.Click += new System.EventHandler(this.buttonAddMaintanceCall_Click);
             // 
             // dataGridViewMaintanceCall
             // 
+            this.dataGridViewMaintanceCall.AllowUserToAddRows = false;
+            this.dataGridViewMaintanceCall.AllowUserToDeleteRows = false;
+            this.dataGridViewMaintanceCall.AllowUserToResizeColumns = false;
+            this.dataGridViewMaintanceCall.AllowUserToResizeRows = false;
             this.dataGridViewMaintanceCall.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMaintanceCall.Location = new System.Drawing.Point(11, 26);
             this.dataGridViewMaintanceCall.Name = "dataGridViewMaintanceCall";
+            this.dataGridViewMaintanceCall.ReadOnly = true;
             this.dataGridViewMaintanceCall.RowHeadersWidth = 51;
             this.dataGridViewMaintanceCall.RowTemplate.Height = 29;
             this.dataGridViewMaintanceCall.Size = new System.Drawing.Size(683, 339);
