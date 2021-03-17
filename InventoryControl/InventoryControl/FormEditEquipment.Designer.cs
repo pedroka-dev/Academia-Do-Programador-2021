@@ -1,9 +1,9 @@
 ﻿
 namespace InventoryControl
 {
-    partial class FormAddEquipment
+    partial class FormEditEquipment
     {
-        /// <summary>
+        /// <summary>fsasaf
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
@@ -167,16 +167,16 @@ namespace InventoryControl
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome do Equipamento:";
             // 
-            // FormAddEquipment
+            // FormEditEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 356);
+            this.ClientSize = new System.Drawing.Size(285, 355);
             this.Controls.Add(this.groupBoxAddEquipment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "FormAddEquipment";
-            this.Text = "Adicionar Equipamento";
+            this.Name = "FormEditEquipment";
+            this.Text = "Editar Equipamento";
             this.groupBoxAddEquipment.ResumeLayout(false);
             this.groupBoxAddEquipment.PerformLayout();
             this.ResumeLayout(false);
