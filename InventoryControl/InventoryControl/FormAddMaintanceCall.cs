@@ -17,7 +17,7 @@ namespace InventoryControl
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)

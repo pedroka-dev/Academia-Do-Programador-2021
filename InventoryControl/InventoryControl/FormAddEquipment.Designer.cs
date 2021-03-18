@@ -163,9 +163,9 @@ namespace InventoryControl
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 20);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nome do Equipamento:";
+            this.label1.Text = "Nome:";
             // 
             // FormAddEquipment
             // 
@@ -173,7 +173,7 @@ namespace InventoryControl
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 356);
             this.Controls.Add(this.groupBoxAddEquipment);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FormAddEquipment";
             this.Text = "Adicionar Equipamento";

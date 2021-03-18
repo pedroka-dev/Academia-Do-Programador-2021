@@ -30,6 +30,7 @@ namespace InventoryControl
         private void InitializeComponent()
         {
             this.groupBoxAddMaintanceCall = new System.Windows.Forms.GroupBox();
+            this.comboBoxEquipment = new System.Windows.Forms.ComboBox();
             this.dateTimePickerOpeningDate = new System.Windows.Forms.DateTimePicker();
             this.textBoxDescriptionName = new System.Windows.Forms.TextBox();
             this.textBoxTitleName = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@ namespace InventoryControl
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxEquipment = new System.Windows.Forms.ComboBox();
             this.groupBoxAddMaintanceCall.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,14 @@ namespace InventoryControl
             this.groupBoxAddMaintanceCall.TabIndex = 0;
             this.groupBoxAddMaintanceCall.TabStop = false;
             this.groupBoxAddMaintanceCall.Text = "Detalhes do Chamado";
+            // 
+            // comboBoxEquipment
+            // 
+            this.comboBoxEquipment.FormattingEnabled = true;
+            this.comboBoxEquipment.Location = new System.Drawing.Point(14, 153);
+            this.comboBoxEquipment.Name = "comboBoxEquipment";
+            this.comboBoxEquipment.Size = new System.Drawing.Size(234, 28);
+            this.comboBoxEquipment.TabIndex = 14;
             // 
             // dateTimePickerOpeningDate
             // 
@@ -139,21 +147,13 @@ namespace InventoryControl
             this.label1.TabIndex = 0;
             this.label1.Text = "Título do chamado:";
             // 
-            // comboBoxEquipment
-            // 
-            this.comboBoxEquipment.FormattingEnabled = true;
-            this.comboBoxEquipment.Location = new System.Drawing.Point(14, 153);
-            this.comboBoxEquipment.Name = "comboBoxEquipment";
-            this.comboBoxEquipment.Size = new System.Drawing.Size(234, 28);
-            this.comboBoxEquipment.TabIndex = 14;
-            // 
             // FormAddMaintanceCall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 297);
             this.Controls.Add(this.groupBoxAddMaintanceCall);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FormAddMaintanceCall";
             this.Text = "Adicionar Manutenção";

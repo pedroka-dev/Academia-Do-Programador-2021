@@ -153,7 +153,7 @@ namespace InventoryControl
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 297);
             this.Controls.Add(this.groupBoxEditMaintanceCall);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FormEditMaintanceCall";
             this.Text = "Editar Manutenção";
