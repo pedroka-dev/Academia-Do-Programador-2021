@@ -32,3 +32,10 @@ InventoryControl/InventoryControlModel/obj/InventoryControlModel.csproj.nuget.g.
 InventoryControl/InventoryControlModel/obj/InventoryControlModel.csproj.nuget.g.targets
 InventoryControl/InventoryControlModel/obj/project.assets.json
 InventoryControl/InventoryControlModel/obj/project.nuget.cache
+InventoryControl/.vs/InventoryControl/DesignTimeBuild/.dtbcache.v2
+InventoryControl/InventoryControl/obj/Debug/netcoreapp3.1/InventoryControl.designer.deps.json
+InventoryControl/InventoryControl/obj/Debug/netcoreapp3.1/InventoryControl.designer.runtimeconfig.json
+InventoryControl/InventoryControl/obj/Debug/netcoreapp3.1/InventoryControl.FormAddEquipment.resources
+InventoryControl/InventoryControl/obj/Debug/netcoreapp3.1/InventoryControl.FormEditEquipment.resources
+InventoryControl/InventoryControl/obj/Debug/netcoreapp3.1/InventoryControl.FormAddMaintanceCall.resources
+InventoryControl/InventoryControl/obj/Debug/netcoreapp3.1/InventoryControl.FormEditMaintanceCall.resources
