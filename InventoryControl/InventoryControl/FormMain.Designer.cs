@@ -35,7 +35,7 @@ namespace InventoryControl
             this.buttonEditEquipment = new System.Windows.Forms.Button();
             this.buttonDeleteEquipment = new System.Windows.Forms.Button();
             this.buttonAddEquipment = new System.Windows.Forms.Button();
-            this.dataGridViewEquipament = new System.Windows.Forms.DataGridView();
+            this.dataGridViewEquipment = new System.Windows.Forms.DataGridView();
             this.tabPageMaintance = new System.Windows.Forms.TabPage();
             this.groupBoxMaintanceCall = new System.Windows.Forms.GroupBox();
             this.buttonEditMaintanceCall = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@ namespace InventoryControl
             this.tabControl.SuspendLayout();
             this.tabPageEquipment.SuspendLayout();
             this.groupBoxEquipment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipament)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipment)).BeginInit();
             this.tabPageMaintance.SuspendLayout();
             this.groupBoxMaintanceCall.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMaintanceCall)).BeginInit();
@@ -77,7 +77,7 @@ namespace InventoryControl
             this.groupBoxEquipment.Controls.Add(this.buttonEditEquipment);
             this.groupBoxEquipment.Controls.Add(this.buttonDeleteEquipment);
             this.groupBoxEquipment.Controls.Add(this.buttonAddEquipment);
-            this.groupBoxEquipment.Controls.Add(this.dataGridViewEquipament);
+            this.groupBoxEquipment.Controls.Add(this.dataGridViewEquipment);
             this.groupBoxEquipment.Location = new System.Drawing.Point(3, 3);
             this.groupBoxEquipment.Name = "groupBoxEquipment";
             this.groupBoxEquipment.Size = new System.Drawing.Size(705, 431);
@@ -118,20 +118,20 @@ namespace InventoryControl
             this.buttonAddEquipment.UseVisualStyleBackColor = true;
             this.buttonAddEquipment.Click += new System.EventHandler(this.buttonAddEquipment_Click);
             // 
-            // dataGridViewEquipament
+            // dataGridViewEquipment
             // 
-            this.dataGridViewEquipament.AllowUserToAddRows = false;
-            this.dataGridViewEquipament.AllowUserToDeleteRows = false;
-            this.dataGridViewEquipament.AllowUserToResizeColumns = false;
-            this.dataGridViewEquipament.AllowUserToResizeRows = false;
-            this.dataGridViewEquipament.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEquipament.Location = new System.Drawing.Point(11, 26);
-            this.dataGridViewEquipament.Name = "dataGridViewEquipament";
-            this.dataGridViewEquipament.ReadOnly = true;
-            this.dataGridViewEquipament.RowHeadersWidth = 51;
-            this.dataGridViewEquipament.RowTemplate.Height = 29;
-            this.dataGridViewEquipament.Size = new System.Drawing.Size(683, 339);
-            this.dataGridViewEquipament.TabIndex = 1;
+            this.dataGridViewEquipment.AllowUserToAddRows = false;
+            this.dataGridViewEquipment.AllowUserToDeleteRows = false;
+            this.dataGridViewEquipment.AllowUserToResizeColumns = false;
+            this.dataGridViewEquipment.AllowUserToResizeRows = false;
+            this.dataGridViewEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEquipment.Location = new System.Drawing.Point(11, 26);
+            this.dataGridViewEquipment.Name = "dataGridViewEquipment";
+            this.dataGridViewEquipment.ReadOnly = true;
+            this.dataGridViewEquipment.RowHeadersWidth = 51;
+            this.dataGridViewEquipment.RowTemplate.Height = 29;
+            this.dataGridViewEquipment.Size = new System.Drawing.Size(683, 339);
+            this.dataGridViewEquipment.TabIndex = 1;
             // 
             // tabPageMaintance
             // 
@@ -218,7 +218,7 @@ namespace InventoryControl
             this.tabControl.ResumeLayout(false);
             this.tabPageEquipment.ResumeLayout(false);
             this.groupBoxEquipment.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipament)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipment)).EndInit();
             this.tabPageMaintance.ResumeLayout(false);
             this.groupBoxMaintanceCall.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMaintanceCall)).EndInit();
@@ -232,7 +232,7 @@ namespace InventoryControl
         private System.Windows.Forms.TabPage tabPageEquipment;
         private System.Windows.Forms.TabPage tabPageMaintance;
         private System.Windows.Forms.GroupBox groupBoxEquipment;
-        private System.Windows.Forms.DataGridView dataGridViewEquipament;
+        private System.Windows.Forms.DataGridView dataGridViewEquipment;
         private System.Windows.Forms.Button buttonAddEquipment;
         private System.Windows.Forms.Button buttonDeleteEquipment;
         private System.Windows.Forms.Button buttonEditEquipment;
