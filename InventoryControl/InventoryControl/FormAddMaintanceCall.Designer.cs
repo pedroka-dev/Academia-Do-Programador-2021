@@ -64,7 +64,6 @@ namespace InventoryControl
             // 
             // comboBoxEquipment
             // 
-            this.comboBoxEquipment.FormattingEnabled = true;
             this.comboBoxEquipment.Location = new System.Drawing.Point(14, 153);
             this.comboBoxEquipment.Name = "comboBoxEquipment";
             this.comboBoxEquipment.Size = new System.Drawing.Size(234, 28);

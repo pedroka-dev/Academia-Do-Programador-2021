@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InventoryControlModel
 {
-    class MaintenanceCall
+    public class MaintenanceCall
     {
         private string titleName;
         private string descriptioName;

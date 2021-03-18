@@ -12,7 +12,12 @@ namespace InventoryControl
 
         public void AddEquipment(Equipment equipment)
         {
-            MessageBox.Show("Equipment=" + equipment.EquipmentName);
+            MessageBox.Show("Equipment=" + equipment.EquipmentName);        //debug
+        }
+
+        public void AddMaintenanceCall(MaintenanceCall maintenanceCall)
+        {
+            MessageBox.Show("MaintenanceCall=" + maintenanceCall.TitleName);        //debug
         }
 
         private void buttonAddEquipment_Click(object sender, System.EventArgs e)
