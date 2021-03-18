@@ -171,10 +171,8 @@ namespace InventoryControl
         private System.Windows.Forms.TextBox textBoxDescriptionName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerOpeningDate;
-        private System.Windows.Forms.TextBox textBoxerialNumber;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.ComboBox comboBoxEquipment;

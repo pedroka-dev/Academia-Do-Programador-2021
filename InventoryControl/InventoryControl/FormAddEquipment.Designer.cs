@@ -193,10 +193,8 @@ namespace InventoryControl
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxManufacterName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerManufacturingDate;
-        private System.Windows.Forms.TextBox textBoxerialNumber;
         private System.Windows.Forms.TextBox textBoxSerialNumber;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;

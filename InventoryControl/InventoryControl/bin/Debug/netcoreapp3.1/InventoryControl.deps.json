@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "InventoryControl/1.0.0": {
+        "dependencies": {
+          "InventoryControlModel": "1.0.0"
+        },
         "runtime": {
           "InventoryControl.dll": {}
+        }
+      },
+      "InventoryControlModel/1.0.0": {
+        "runtime": {
+          "InventoryControlModel.dll": {}
         }
       }
     }
   },
   "libraries": {
     "InventoryControl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryControlModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

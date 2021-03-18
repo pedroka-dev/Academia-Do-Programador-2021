@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using InventoryControlModel;
 
 namespace InventoryControl
 {
@@ -7,6 +8,11 @@ namespace InventoryControl
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        public void AddEquipment(Equipment equipment)
+        {
+            MessageBox.Show("Equipment=" + equipment.EquipmentName);
         }
 
         private void buttonAddEquipment_Click(object sender, System.EventArgs e)

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\InventoryControlModel\InventoryControlModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="FormEditMaintanceCall.cs">
       <SubType>Form</SubType>
     </Compile>
