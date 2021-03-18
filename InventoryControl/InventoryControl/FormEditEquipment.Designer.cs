@@ -29,7 +29,7 @@ namespace InventoryControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxAddEquipment = new System.Windows.Forms.GroupBox();
+            this.groupBoxEditEquipment = new System.Windows.Forms.GroupBox();
             this.textBoxManufacterName = new System.Windows.Forms.TextBox();
             this.dateTimePickerManufacturingDate = new System.Windows.Forms.DateTimePicker();
             this.textBoxSerialNumber = new System.Windows.Forms.TextBox();
@@ -42,29 +42,29 @@ namespace InventoryControl
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBoxAddEquipment.SuspendLayout();
+            this.groupBoxEditEquipment.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBoxAddEquipment
+            // groupBoxEditEquipment
             // 
-            this.groupBoxAddEquipment.Controls.Add(this.textBoxManufacterName);
-            this.groupBoxAddEquipment.Controls.Add(this.dateTimePickerManufacturingDate);
-            this.groupBoxAddEquipment.Controls.Add(this.textBoxSerialNumber);
-            this.groupBoxAddEquipment.Controls.Add(this.textBoxAcquisitionPrice);
-            this.groupBoxAddEquipment.Controls.Add(this.textBoxEquipmentName);
-            this.groupBoxAddEquipment.Controls.Add(this.buttonConfirm);
-            this.groupBoxAddEquipment.Controls.Add(this.buttonCancel);
-            this.groupBoxAddEquipment.Controls.Add(this.label5);
-            this.groupBoxAddEquipment.Controls.Add(this.label4);
-            this.groupBoxAddEquipment.Controls.Add(this.label3);
-            this.groupBoxAddEquipment.Controls.Add(this.label2);
-            this.groupBoxAddEquipment.Controls.Add(this.label1);
-            this.groupBoxAddEquipment.Location = new System.Drawing.Point(7, 6);
-            this.groupBoxAddEquipment.Name = "groupBoxAddEquipment";
-            this.groupBoxAddEquipment.Size = new System.Drawing.Size(262, 335);
-            this.groupBoxAddEquipment.TabIndex = 0;
-            this.groupBoxAddEquipment.TabStop = false;
-            this.groupBoxAddEquipment.Text = "Detalhes do Equipamento";
+            this.groupBoxEditEquipment.Controls.Add(this.textBoxManufacterName);
+            this.groupBoxEditEquipment.Controls.Add(this.dateTimePickerManufacturingDate);
+            this.groupBoxEditEquipment.Controls.Add(this.textBoxSerialNumber);
+            this.groupBoxEditEquipment.Controls.Add(this.textBoxAcquisitionPrice);
+            this.groupBoxEditEquipment.Controls.Add(this.textBoxEquipmentName);
+            this.groupBoxEditEquipment.Controls.Add(this.buttonConfirm);
+            this.groupBoxEditEquipment.Controls.Add(this.buttonCancel);
+            this.groupBoxEditEquipment.Controls.Add(this.label5);
+            this.groupBoxEditEquipment.Controls.Add(this.label4);
+            this.groupBoxEditEquipment.Controls.Add(this.label3);
+            this.groupBoxEditEquipment.Controls.Add(this.label2);
+            this.groupBoxEditEquipment.Controls.Add(this.label1);
+            this.groupBoxEditEquipment.Location = new System.Drawing.Point(7, 6);
+            this.groupBoxEditEquipment.Name = "groupBoxEditEquipment";
+            this.groupBoxEditEquipment.Size = new System.Drawing.Size(262, 335);
+            this.groupBoxEditEquipment.TabIndex = 0;
+            this.groupBoxEditEquipment.TabStop = false;
+            this.groupBoxEditEquipment.Text = "Detalhes do Equipamento";
             // 
             // textBoxManufacterName
             // 
@@ -172,20 +172,20 @@ namespace InventoryControl
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(285, 355);
-            this.Controls.Add(this.groupBoxAddEquipment);
+            this.Controls.Add(this.groupBoxEditEquipment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormEditEquipment";
             this.Text = "Editar Equipamento";
-            this.groupBoxAddEquipment.ResumeLayout(false);
-            this.groupBoxAddEquipment.PerformLayout();
+            this.groupBoxEditEquipment.ResumeLayout(false);
+            this.groupBoxEditEquipment.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxAddEquipment;
+        private System.Windows.Forms.GroupBox groupBoxEditEquipment;
         private System.Windows.Forms.TextBox textBoxEquipmentName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxAcquisitionPrice;
