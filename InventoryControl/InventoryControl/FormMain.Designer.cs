@@ -36,15 +36,19 @@ namespace InventoryControl
             this.buttonDeleteEquipment = new System.Windows.Forms.Button();
             this.buttonAddEquipment = new System.Windows.Forms.Button();
             this.dataGridViewEquipment = new System.Windows.Forms.DataGridView();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageMaintance = new System.Windows.Forms.TabPage();
             this.groupBoxMaintanceCall = new System.Windows.Forms.GroupBox();
             this.buttonEditMaintanceCall = new System.Windows.Forms.Button();
             this.buttonDeleteMaintanceCall = new System.Windows.Forms.Button();
             this.buttonAddMaintanceCall = new System.Windows.Forms.Button();
             this.dataGridViewMaintanceCall = new System.Windows.Forms.DataGridView();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTitleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEquipmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnOpeningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDaysOpen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl.SuspendLayout();
             this.tabPageEquipment.SuspendLayout();
             this.groupBoxEquipment.SuspendLayout();
@@ -127,19 +131,55 @@ namespace InventoryControl
             this.dataGridViewEquipment.AllowUserToDeleteRows = false;
             this.dataGridViewEquipment.AllowUserToResizeColumns = false;
             this.dataGridViewEquipment.AllowUserToResizeRows = false;
-            this.dataGridViewEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEquipment.ColumnHeadersHeight = 29;
+            this.dataGridViewEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewEquipment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnName,
             this.ColumnSerialNumber,
             this.ColumnManufacturerName});
             this.dataGridViewEquipment.Location = new System.Drawing.Point(11, 26);
+            this.dataGridViewEquipment.MultiSelect = false;
             this.dataGridViewEquipment.Name = "dataGridViewEquipment";
             this.dataGridViewEquipment.ReadOnly = true;
             this.dataGridViewEquipment.RowHeadersVisible = false;
             this.dataGridViewEquipment.RowHeadersWidth = 51;
+            this.dataGridViewEquipment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewEquipment.RowTemplate.Height = 29;
+            this.dataGridViewEquipment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEquipment.Size = new System.Drawing.Size(683, 339);
             this.dataGridViewEquipment.TabIndex = 1;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnName.HeaderText = "Nome";
+            this.ColumnName.MinimumWidth = 6;
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnName.Width = 226;
+            // 
+            // ColumnSerialNumber
+            // 
+            this.ColumnSerialNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnSerialNumber.HeaderText = "Número de Serial";
+            this.ColumnSerialNumber.MinimumWidth = 6;
+            this.ColumnSerialNumber.Name = "ColumnSerialNumber";
+            this.ColumnSerialNumber.ReadOnly = true;
+            this.ColumnSerialNumber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnSerialNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnSerialNumber.Width = 226;
+            // 
+            // ColumnManufacturerName
+            // 
+            this.ColumnManufacturerName.HeaderText = "Nome do Fabricante";
+            this.ColumnManufacturerName.MinimumWidth = 6;
+            this.ColumnManufacturerName.Name = "ColumnManufacturerName";
+            this.ColumnManufacturerName.ReadOnly = true;
+            this.ColumnManufacturerName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnManufacturerName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnManufacturerName.Width = 228;
             // 
             // tabPageMaintance
             // 
@@ -204,40 +244,64 @@ namespace InventoryControl
             this.dataGridViewMaintanceCall.AllowUserToDeleteRows = false;
             this.dataGridViewMaintanceCall.AllowUserToResizeColumns = false;
             this.dataGridViewMaintanceCall.AllowUserToResizeRows = false;
-            this.dataGridViewMaintanceCall.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMaintanceCall.ColumnHeadersHeight = 29;
+            this.dataGridViewMaintanceCall.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewMaintanceCall.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnTitleName,
+            this.ColumnEquipmentName,
+            this.ColumnOpeningDate,
+            this.ColumnDaysOpen});
             this.dataGridViewMaintanceCall.Location = new System.Drawing.Point(11, 26);
+            this.dataGridViewMaintanceCall.MultiSelect = false;
             this.dataGridViewMaintanceCall.Name = "dataGridViewMaintanceCall";
             this.dataGridViewMaintanceCall.ReadOnly = true;
+            this.dataGridViewMaintanceCall.RowHeadersVisible = false;
             this.dataGridViewMaintanceCall.RowHeadersWidth = 51;
+            this.dataGridViewMaintanceCall.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewMaintanceCall.RowTemplate.Height = 29;
+            this.dataGridViewMaintanceCall.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewMaintanceCall.Size = new System.Drawing.Size(683, 339);
             this.dataGridViewMaintanceCall.TabIndex = 1;
             // 
-            // ColumnName
+            // ColumnTitleName
             // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnName.HeaderText = "Nome";
-            this.ColumnName.MinimumWidth = 6;
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Width = 226;
+            this.ColumnTitleName.HeaderText = "Nome do Chamado";
+            this.ColumnTitleName.MinimumWidth = 6;
+            this.ColumnTitleName.Name = "ColumnTitleName";
+            this.ColumnTitleName.ReadOnly = true;
+            this.ColumnTitleName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnTitleName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnTitleName.Width = 175;
             // 
-            // ColumnSerialNumber
+            // ColumnEquipmentName
             // 
-            this.ColumnSerialNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnSerialNumber.HeaderText = "Número de Serial";
-            this.ColumnSerialNumber.MinimumWidth = 6;
-            this.ColumnSerialNumber.Name = "ColumnSerialNumber";
-            this.ColumnSerialNumber.ReadOnly = true;
-            this.ColumnSerialNumber.Width = 226;
+            this.ColumnEquipmentName.HeaderText = "Nome do Equip.";
+            this.ColumnEquipmentName.MinimumWidth = 6;
+            this.ColumnEquipmentName.Name = "ColumnEquipmentName";
+            this.ColumnEquipmentName.ReadOnly = true;
+            this.ColumnEquipmentName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnEquipmentName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnEquipmentName.Width = 175;
             // 
-            // ColumnManufacturerName
+            // ColumnOpeningDate
             // 
-            this.ColumnManufacturerName.HeaderText = "Nome do Fabricante";
-            this.ColumnManufacturerName.MinimumWidth = 6;
-            this.ColumnManufacturerName.Name = "ColumnManufacturerName";
-            this.ColumnManufacturerName.ReadOnly = true;
-            this.ColumnManufacturerName.Width = 228;
+            this.ColumnOpeningDate.HeaderText = "Data de Abertura";
+            this.ColumnOpeningDate.MinimumWidth = 6;
+            this.ColumnOpeningDate.Name = "ColumnOpeningDate";
+            this.ColumnOpeningDate.ReadOnly = true;
+            this.ColumnOpeningDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnOpeningDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnOpeningDate.Width = 175;
+            // 
+            // ColumnDaysOpen
+            // 
+            this.ColumnDaysOpen.HeaderText = "Dias Aberto";
+            this.ColumnDaysOpen.MinimumWidth = 6;
+            this.ColumnDaysOpen.Name = "ColumnDaysOpen";
+            this.ColumnDaysOpen.ReadOnly = true;
+            this.ColumnDaysOpen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnDaysOpen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnDaysOpen.Width = 155;
             // 
             // FormMain
             // 
@@ -278,6 +342,10 @@ namespace InventoryControl
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSerialNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnManufacturerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTitleName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEquipmentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOpeningDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDaysOpen;
     }
 }
 

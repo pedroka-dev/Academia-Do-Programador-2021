@@ -67,21 +67,21 @@ namespace InventoryControl
             this.comboBoxEquipment.Location = new System.Drawing.Point(14, 153);
             this.comboBoxEquipment.Name = "comboBoxEquipment";
             this.comboBoxEquipment.Size = new System.Drawing.Size(234, 28);
-            this.comboBoxEquipment.TabIndex = 14;
+            this.comboBoxEquipment.TabIndex = 3;
             // 
             // dateTimePickerOpeningDate
             // 
             this.dateTimePickerOpeningDate.Location = new System.Drawing.Point(15, 205);
             this.dateTimePickerOpeningDate.Name = "dateTimePickerOpeningDate";
             this.dateTimePickerOpeningDate.Size = new System.Drawing.Size(234, 27);
-            this.dateTimePickerOpeningDate.TabIndex = 11;
+            this.dateTimePickerOpeningDate.TabIndex = 4;
             // 
             // textBoxDescriptionName
             // 
             this.textBoxDescriptionName.Location = new System.Drawing.Point(15, 99);
             this.textBoxDescriptionName.Name = "textBoxDescriptionName";
             this.textBoxDescriptionName.Size = new System.Drawing.Size(234, 27);
-            this.textBoxDescriptionName.TabIndex = 5;
+            this.textBoxDescriptionName.TabIndex = 2;
             // 
             // textBoxTitleName
             // 
@@ -95,7 +95,7 @@ namespace InventoryControl
             this.buttonConfirm.Location = new System.Drawing.Point(14, 243);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(94, 29);
-            this.buttonConfirm.TabIndex = 13;
+            this.buttonConfirm.TabIndex = 5;
             this.buttonConfirm.Text = "Confirmar";
             this.buttonConfirm.UseVisualStyleBackColor = true;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
@@ -105,7 +105,7 @@ namespace InventoryControl
             this.buttonCancel.Location = new System.Drawing.Point(158, 243);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancel.TabIndex = 12;
+            this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);

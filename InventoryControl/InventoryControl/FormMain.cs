@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using InventoryControlModel;
 
@@ -7,6 +8,8 @@ namespace InventoryControl
     public partial class FormMain : Form
     {
         public List<Equipment> ListEquipment = new List<Equipment>();
+        public List<MaintenanceCall> ListMaintenanceCall = new List<MaintenanceCall>();
+
 
         public FormMain()
         {
@@ -22,7 +25,9 @@ namespace InventoryControl
 
         public void AddMaintenanceCall(MaintenanceCall maintenanceCall)
         {
-            MessageBox.Show("MaintenanceCall=" + maintenanceCall.TitleName);        //debug
+            ListMaintenanceCall.Add(maintenanceCall);
+            UpdateGridMaintenanceCall();
+            //MessageBox.Show("MaintenanceCall=" + maintenanceCall.TitleName);        //debug
         }
 
         public void UpdateGridEquipment()
@@ -31,6 +36,16 @@ namespace InventoryControl
             foreach (Equipment equip in ListEquipment)
             {
                 dataGridViewEquipment.Rows.Add(equip.EquipmentName, equip.SerialNumber, equip.ManufacturerName);
+            }
+        }
+
+        public void UpdateGridMaintenanceCall()
+        {
+            dataGridViewMaintanceCall.Rows.Clear();
+            foreach (MaintenanceCall maintenance in ListMaintenanceCall)
+            {
+                string daysOpen = (DateTime.Now - maintenance.OpeningDate).Days.ToString();
+                dataGridViewMaintanceCall.Rows.Add(maintenance.TitleName, maintenance.Equipment.EquipmentName, maintenance.OpeningDate.ToString(), daysOpen);
             }
         }
 
@@ -64,6 +79,7 @@ namespace InventoryControl
                 Owner = this
             };
             screenAddMaintanceCall.Show();
+            screenAddMaintanceCall.PopulateComboBox(ListEquipment);
         }
 
         private void buttonEditMaintanceCall_Click(object sender, System.EventArgs e)

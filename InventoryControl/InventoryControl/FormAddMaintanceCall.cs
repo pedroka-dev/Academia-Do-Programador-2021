@@ -16,6 +16,17 @@ namespace InventoryControl
             InitializeComponent();
         }
 
+        public void PopulateComboBox(List<Equipment> ListEquip)
+        {
+            var bindingSource1 = new BindingSource();
+            bindingSource1.DataSource = ListEquip;
+
+            comboBoxEquipment.DataSource = bindingSource1.DataSource;
+
+            comboBoxEquipment.DisplayMember = "equipmentName";
+            comboBoxEquipment.ValueMember = "equipmentName";
+        }
+
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -34,7 +45,7 @@ namespace InventoryControl
                         {
                             string titleName = textBoxTitleName.Text;
                             string descriptionName = textBoxDescriptionName.Text;
-                            Equipment equipment = (Equipment)comboBoxEquipment.SelectedValue;
+                            Equipment equipment = (Equipment)comboBoxEquipment.SelectedItem;
                             DateTime openingDate = dateTimePickerOpeningDate.Value;
 
                             MaintenanceCall newMainanceCall = new MaintenanceCall(titleName, descriptionName, equipment, openingDate);
