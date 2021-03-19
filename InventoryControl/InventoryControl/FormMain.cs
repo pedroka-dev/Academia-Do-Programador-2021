@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using InventoryControlModel;
+using Newtonsoft.Json;
 
 namespace InventoryControl
 {
     public partial class FormMain : Form
     {
-        private List<Equipment> ListEquipment = new List<Equipment>();
+        private List<Equipment> ListEquipment;
         private List<MaintenanceCall> ListMaintenanceCall = new List<MaintenanceCall>();
 
 
         public FormMain()
         {
             InitializeComponent();
+
+            ListEquipment = DeserializeJson<Equipment>("ListEquipment");
+
+            UpdateGridEquipment();
         }
 
         public void AddEquipment(Equipment equipment, int? optionalIndex = null)
@@ -44,10 +50,14 @@ namespace InventoryControl
 
         public void UpdateGridEquipment()
         {
-            dataGridViewEquipment.Rows.Clear();
-            foreach (Equipment equip in ListEquipment)
+            if (ListEquipment != null)
             {
-                dataGridViewEquipment.Rows.Add(equip.EquipmentName, equip.SerialNumber, equip.ManufacturerName);
+                SerializeJson(ListEquipment, "ListEquipment");
+                dataGridViewEquipment.Rows.Clear();
+                foreach (Equipment equip in ListEquipment)
+                {
+                    dataGridViewEquipment.Rows.Add(equip.EquipmentName, equip.SerialNumber, equip.ManufacturerName);
+                }
             }
         }
 
@@ -59,6 +69,23 @@ namespace InventoryControl
                 string daysOpen = (DateTime.Now - maintenance.OpeningDate).Days.ToString();
                 dataGridViewMaintanceCall.Rows.Add(maintenance.TitleName, maintenance.Equipment.EquipmentName, maintenance.OpeningDate.ToString(), daysOpen);
             }
+        }
+
+        public void SerializeJson<T>(List<T> listGeneric, string fileName)
+        {
+            string jsonString = JsonConvert.SerializeObject(listGeneric);
+            File.WriteAllText(fileName + ".json", jsonString);
+        }
+
+        public List<T> DeserializeJson<T>(string fileName)
+        {
+            if (File.Exists(fileName + ".json"))
+            {
+                string jsonString = File.ReadAllText(fileName + ".json");
+                return JsonConvert.DeserializeObject<List<T>>(jsonString);
+            }
+
+            return new List<T>();
         }
 
         private void buttonAddEquipment_Click(object sender, System.EventArgs e)
