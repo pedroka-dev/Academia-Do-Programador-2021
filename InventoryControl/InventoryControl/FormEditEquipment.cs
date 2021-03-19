@@ -5,14 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using InventoryControlModel;
 
 namespace InventoryControl
 {
     public partial class FormEditEquipment : Form
     {
-        public FormEditEquipment()
+        public FormEditEquipment(Equipment equip)
         {
             InitializeComponent();
+
+            textBoxEquipmentName.Text = equip.EquipmentName;
+            textBoxAcquisitionPrice.Text = equip.AcquisitionPrice.ToString();
+            textBoxSerialNumber.Text = equip.SerialNumber;
+            dateTimePickerManufacturingDate.Value = equip.ManufacturingDate;
+            textBoxManufacterName.Text = equip.ManufacturerName;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

@@ -60,11 +60,19 @@ namespace InventoryControl
 
         private void buttonEditEquipment_Click(object sender, System.EventArgs e)
         {
-            FormEditEquipment screenEditEquipment = new FormEditEquipment
+            if (dataGridViewEquipment.CurrentCell != null)
             {
-                Owner = this
-            };
-            screenEditEquipment.Show();
+                int listIndex = dataGridViewEquipment.CurrentCell.RowIndex;
+                FormEditEquipment screenEditEquipment = new FormEditEquipment(ListEquipment[listIndex])
+                {
+                    Owner = this
+                };
+                screenEditEquipment.Show();
+            }
+            else
+            {
+                MessageBox.Show("Selecione ao menos um Equipamento antes de tentar editar um item.", "Operação Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void buttonDeleteEquipment_Click(object sender, System.EventArgs e)
@@ -97,11 +105,20 @@ namespace InventoryControl
 
         private void buttonEditMaintanceCall_Click(object sender, System.EventArgs e)
         {
-            FormEditMaintanceCall screenEditMaintanceCall = new FormEditMaintanceCall
+            if (dataGridViewMaintanceCall.CurrentCell != null)
             {
-                Owner = this
-            };
-            screenEditMaintanceCall.Show();
+                int listIndex = dataGridViewMaintanceCall.CurrentCell.RowIndex;
+                FormEditMaintanceCall screenEditMaintanceCall = new FormEditMaintanceCall(ListMaintenanceCall[listIndex])
+                {
+                    Owner = this
+                };
+                screenEditMaintanceCall.Show();
+                screenEditMaintanceCall.PopulateComboBox(ListEquipment);
+            }
+            else
+            {
+                MessageBox.Show("Selecione ao menos um Chamado de Manutenção antes de tentar editar um item.", "Operação Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void buttonDeleteMaintanceCall_Click(object sender, System.EventArgs e)
@@ -120,7 +137,6 @@ namespace InventoryControl
             {
                 MessageBox.Show("Selecione ao menos um Chamado de Manutenção antes de tentar excluir um item.", "Operação Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
     }
 }
