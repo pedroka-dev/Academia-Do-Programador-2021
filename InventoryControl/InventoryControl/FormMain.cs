@@ -1,9 +1,9 @@
-﻿using System;
+﻿using InventoryControlModel;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using InventoryControlModel;
-using Newtonsoft.Json;
 
 namespace InventoryControl
 {
@@ -85,7 +85,7 @@ namespace InventoryControl
             }
             catch (IOException ex)
             {
-                MessageBox.Show("Erro na operação de Serialização de arquivo JSON: \n" + ex.Message+"\nCaso este erro persista, abra o aplicativo em modo Administrador.", "Exceção IOException Capturada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro na operação de Serialização de arquivo JSON: \n" + ex.Message + "\nCaso este erro persista, abra o aplicativo em modo Administrador.", "Exceção IOException Capturada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -101,7 +101,7 @@ namespace InventoryControl
             }
             catch (IOException ex)
             {
-                MessageBox.Show("Erro na operação de Deserialização de arquivo JSON: \n" + ex.Message+ "\nCaso este erro persista, abra o aplicativo em modo Administrador.", "Exceção IOException Capturada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro na operação de Deserialização de arquivo JSON: \n" + ex.Message + "\nCaso este erro persista, abra o aplicativo em modo Administrador.", "Exceção IOException Capturada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return new List<T>();

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using InventoryControlModel;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using InventoryControlModel;
 
 namespace InventoryControl
 {
@@ -55,7 +55,7 @@ namespace InventoryControl
                             MaintenanceCall newMainanceCall = new MaintenanceCall(titleName, descriptionName, equipment, openingDate);
 
                             FormMain parentForm = (FormMain)this.Owner;
-                            parentForm.AddMaintenanceCall(newMainanceCall,MaintanceCallIndex);
+                            parentForm.AddMaintenanceCall(newMainanceCall, MaintanceCallIndex);
                             this.Dispose();
                         }
                         catch (ArgumentException ex)

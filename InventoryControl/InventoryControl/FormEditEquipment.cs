@@ -1,12 +1,12 @@
-﻿using System;
+﻿using InventoryControlModel;
+using System;
 using System.Windows.Forms;
-using InventoryControlModel;
 
 namespace InventoryControl
 {
     public partial class FormEditEquipment : Form
     {
-        private int EquipmentIndex; 
+        private int EquipmentIndex;
 
         public FormEditEquipment(Equipment equip, int objIndex)
         {
@@ -45,7 +45,7 @@ namespace InventoryControl
                         Equipment newEquipment = new Equipment(equipmentName, acquisitionPrice, serialNumber, manufacturingDate, manufacterName);
 
                         FormMain parentForm = (FormMain)this.Owner;
-                        parentForm.AddEquipment(newEquipment,EquipmentIndex);
+                        parentForm.AddEquipment(newEquipment, EquipmentIndex);
                         this.Dispose();
                     }
                     catch (ArgumentException ex)

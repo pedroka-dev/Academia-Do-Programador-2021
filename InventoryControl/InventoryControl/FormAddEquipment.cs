@@ -1,6 +1,6 @@
-﻿using System;
+﻿using InventoryControlModel;
+using System;
 using System.Windows.Forms;
-using InventoryControlModel;
 
 namespace InventoryControl
 {
