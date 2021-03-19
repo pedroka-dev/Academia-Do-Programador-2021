@@ -1,6 +1,11 @@
 # Introdução
-O InventoryControl é um aplicativo WindowsForm desenvolvido em C# para a 2a Etapa do Processo Seletivo da Academia do Programador 2021. Ele permite o registro, visualização, edição e exclusão de equipamentos e seus respectivos chamados de manutenção. Este aplicativo possuí persistencia de dados através de serialização / deserialização de arquivos JSON.
+O InventoryControl é um aplicativo WindowsForm desenvolvido em C# para a 2a Etapa do Processo Seletivo da Academia do Programador 2021. 
 
+Este aplicativo realiza o registro, visualização, edição e exclusão de Equipamentos e seus respectivos Chamados de Manutenção. O InventoryControl também possuí persistencia de dados através de serialização / deserialização de arquivos JSON.
+
+O projeto foi realizado levando em consideração boas praticas de de desenvolvimento e organização, Pull Requets de outras Branchs, cartões de Issues utilizados como User Stories e um Kaban board próprio.
+
+---
 
 # Screenshots - Controle de Equipamentos
   - Equipamentos Cadastrados:
@@ -19,6 +24,8 @@ O InventoryControl é um aplicativo WindowsForm desenvolvido em C# para a 2a Eta
   
     ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/excluir%20equipamento.JPG?token=AMEQONFXW5IGIOKRG7REYUTALZAG4)
     
+---    
+ 
 # Screenshots - Controle de Chamados de Manutenção
   - Chamados de Manutenção Cadastrados:
 
@@ -35,6 +42,8 @@ O InventoryControl é um aplicativo WindowsForm desenvolvido em C# para a 2a Eta
   - Excluir Equipamento existente:
   
     ![alt text](https://github.com/pedro-ca/AcademiaDoProgramador2021/blob/main/Imagens/excluir%20chamado%20de%20manutenção.JPG)
+    
+---
 
 # Organização do Projeto
 O desenvolvimento do projeto foi planejados baseado no sistema de Issues disponibilizados pelo Github, que neste projeto foram utilizados como cartões de User Stories. Certas conveções foram seguidas a risca, como por exemplo:
