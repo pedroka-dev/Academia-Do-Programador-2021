@@ -26,7 +26,9 @@ namespace InventoryControl
                     try
                     {
                         string equipmentName = textBoxEquipmentName.Text;
-                        float acquisitionPrice = float.Parse(textBoxAcquisitionPrice.Text);
+                        float acquisitionPrice;
+                        if (!float.TryParse(textBoxAcquisitionPrice.Text, out acquisitionPrice))
+                            acquisitionPrice = 0;
                         string serialNumber = textBoxSerialNumber.Text;
                         DateTime manufacturingDate = dateTimePickerManufacturingDate.Value;
                         string manufacterName = textBoxManufacterName.Text;
@@ -50,9 +52,17 @@ namespace InventoryControl
 
         }
 
-        private void textBoxSerialNumber_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxAcquisitionPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
 
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

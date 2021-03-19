@@ -79,6 +79,7 @@ namespace InventoryControl
             // textBoxDescriptionName
             // 
             this.textBoxDescriptionName.Location = new System.Drawing.Point(15, 99);
+            this.textBoxDescriptionName.MaxLength = 30;
             this.textBoxDescriptionName.Name = "textBoxDescriptionName";
             this.textBoxDescriptionName.Size = new System.Drawing.Size(234, 27);
             this.textBoxDescriptionName.TabIndex = 2;
@@ -86,6 +87,7 @@ namespace InventoryControl
             // textBoxTitleName
             // 
             this.textBoxTitleName.Location = new System.Drawing.Point(15, 46);
+            this.textBoxTitleName.MaxLength = 30;
             this.textBoxTitleName.Name = "textBoxTitleName";
             this.textBoxTitleName.Size = new System.Drawing.Size(234, 27);
             this.textBoxTitleName.TabIndex = 1;

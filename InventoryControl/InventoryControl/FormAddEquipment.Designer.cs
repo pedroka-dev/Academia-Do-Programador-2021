@@ -69,6 +69,7 @@ namespace InventoryControl
             // textBoxManufacterName
             // 
             this.textBoxManufacterName.Location = new System.Drawing.Point(15, 258);
+            this.textBoxManufacterName.MaxLength = 30;
             this.textBoxManufacterName.Name = "textBoxManufacterName";
             this.textBoxManufacterName.Size = new System.Drawing.Size(234, 27);
             this.textBoxManufacterName.TabIndex = 5;
@@ -83,21 +84,24 @@ namespace InventoryControl
             // textBoxSerialNumber
             // 
             this.textBoxSerialNumber.Location = new System.Drawing.Point(15, 152);
+            this.textBoxSerialNumber.MaxLength = 30;
             this.textBoxSerialNumber.Name = "textBoxSerialNumber";
             this.textBoxSerialNumber.Size = new System.Drawing.Size(234, 27);
             this.textBoxSerialNumber.TabIndex = 3;
-            this.textBoxSerialNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSerialNumber_KeyPress);
             // 
             // textBoxAcquisitionPrice
             // 
             this.textBoxAcquisitionPrice.Location = new System.Drawing.Point(15, 99);
+            this.textBoxAcquisitionPrice.MaxLength = 30;
             this.textBoxAcquisitionPrice.Name = "textBoxAcquisitionPrice";
             this.textBoxAcquisitionPrice.Size = new System.Drawing.Size(234, 27);
             this.textBoxAcquisitionPrice.TabIndex = 2;
+            this.textBoxAcquisitionPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAcquisitionPrice_KeyPress);
             // 
             // textBoxEquipmentName
             // 
             this.textBoxEquipmentName.Location = new System.Drawing.Point(15, 46);
+            this.textBoxEquipmentName.MaxLength = 30;
             this.textBoxEquipmentName.Name = "textBoxEquipmentName";
             this.textBoxEquipmentName.Size = new System.Drawing.Size(234, 27);
             this.textBoxEquipmentName.TabIndex = 1;
