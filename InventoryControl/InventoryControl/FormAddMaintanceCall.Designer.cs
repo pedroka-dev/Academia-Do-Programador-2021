@@ -30,6 +30,7 @@ namespace InventoryControl
         private void InitializeComponent()
         {
             this.groupBoxAddMaintanceCall = new System.Windows.Forms.GroupBox();
+            this.comboBoxEquipment = new System.Windows.Forms.ComboBox();
             this.dateTimePickerOpeningDate = new System.Windows.Forms.DateTimePicker();
             this.textBoxDescriptionName = new System.Windows.Forms.TextBox();
             this.textBoxTitleName = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@ namespace InventoryControl
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxEquipment = new System.Windows.Forms.ComboBox();
             this.groupBoxAddMaintanceCall.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,23 +62,32 @@ namespace InventoryControl
             this.groupBoxAddMaintanceCall.TabStop = false;
             this.groupBoxAddMaintanceCall.Text = "Detalhes do Chamado";
             // 
+            // comboBoxEquipment
+            // 
+            this.comboBoxEquipment.Location = new System.Drawing.Point(14, 153);
+            this.comboBoxEquipment.Name = "comboBoxEquipment";
+            this.comboBoxEquipment.Size = new System.Drawing.Size(234, 28);
+            this.comboBoxEquipment.TabIndex = 3;
+            // 
             // dateTimePickerOpeningDate
             // 
             this.dateTimePickerOpeningDate.Location = new System.Drawing.Point(15, 205);
             this.dateTimePickerOpeningDate.Name = "dateTimePickerOpeningDate";
             this.dateTimePickerOpeningDate.Size = new System.Drawing.Size(234, 27);
-            this.dateTimePickerOpeningDate.TabIndex = 11;
+            this.dateTimePickerOpeningDate.TabIndex = 4;
             // 
             // textBoxDescriptionName
             // 
             this.textBoxDescriptionName.Location = new System.Drawing.Point(15, 99);
+            this.textBoxDescriptionName.MaxLength = 30;
             this.textBoxDescriptionName.Name = "textBoxDescriptionName";
             this.textBoxDescriptionName.Size = new System.Drawing.Size(234, 27);
-            this.textBoxDescriptionName.TabIndex = 5;
+            this.textBoxDescriptionName.TabIndex = 2;
             // 
             // textBoxTitleName
             // 
             this.textBoxTitleName.Location = new System.Drawing.Point(15, 46);
+            this.textBoxTitleName.MaxLength = 30;
             this.textBoxTitleName.Name = "textBoxTitleName";
             this.textBoxTitleName.Size = new System.Drawing.Size(234, 27);
             this.textBoxTitleName.TabIndex = 1;
@@ -88,7 +97,7 @@ namespace InventoryControl
             this.buttonConfirm.Location = new System.Drawing.Point(14, 243);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(94, 29);
-            this.buttonConfirm.TabIndex = 13;
+            this.buttonConfirm.TabIndex = 5;
             this.buttonConfirm.Text = "Confirmar";
             this.buttonConfirm.UseVisualStyleBackColor = true;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
@@ -98,7 +107,7 @@ namespace InventoryControl
             this.buttonCancel.Location = new System.Drawing.Point(158, 243);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancel.TabIndex = 12;
+            this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -139,21 +148,13 @@ namespace InventoryControl
             this.label1.TabIndex = 0;
             this.label1.Text = "Título do chamado:";
             // 
-            // comboBoxEquipment
-            // 
-            this.comboBoxEquipment.FormattingEnabled = true;
-            this.comboBoxEquipment.Location = new System.Drawing.Point(14, 153);
-            this.comboBoxEquipment.Name = "comboBoxEquipment";
-            this.comboBoxEquipment.Size = new System.Drawing.Size(234, 28);
-            this.comboBoxEquipment.TabIndex = 14;
-            // 
             // FormAddMaintanceCall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 297);
             this.Controls.Add(this.groupBoxAddMaintanceCall);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FormAddMaintanceCall";
             this.Text = "Adicionar Manutenção";
@@ -171,10 +172,8 @@ namespace InventoryControl
         private System.Windows.Forms.TextBox textBoxDescriptionName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerOpeningDate;
-        private System.Windows.Forms.TextBox textBoxerialNumber;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.ComboBox comboBoxEquipment;

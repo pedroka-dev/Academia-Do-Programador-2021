@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InventoryControlModel
 {
-    class MaintenanceCall
+    public class MaintenanceCall
     {
         private string titleName;
         private string descriptioName;
@@ -22,8 +22,15 @@ namespace InventoryControlModel
         public string TitleName { get => titleName; set => titleName = value; }
         public string DescriptioName { get => descriptioName; set => descriptioName = value; }
         public Equipment Equipment { get => equipment; set => equipment = value; }
-        public DateTime OpeningDate { get => openingDate; set => openingDate = value; }
-
-        
+        public DateTime OpeningDate
+        {
+            get { return openingDate; }
+            set 
+            { 
+                if(value > DateTime.Now)
+                    throw new ArgumentException("OpeningDate property cannot be set as a date from the future.");
+                openingDate = value; 
+            }
+        }
     }
 }

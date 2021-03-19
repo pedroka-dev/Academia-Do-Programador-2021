@@ -69,6 +69,7 @@ namespace InventoryControl
             // textBoxManufacterName
             // 
             this.textBoxManufacterName.Location = new System.Drawing.Point(15, 258);
+            this.textBoxManufacterName.MaxLength = 30;
             this.textBoxManufacterName.Name = "textBoxManufacterName";
             this.textBoxManufacterName.Size = new System.Drawing.Size(234, 27);
             this.textBoxManufacterName.TabIndex = 9;
@@ -83,21 +84,24 @@ namespace InventoryControl
             // textBoxSerialNumber
             // 
             this.textBoxSerialNumber.Location = new System.Drawing.Point(15, 152);
+            this.textBoxSerialNumber.MaxLength = 30;
             this.textBoxSerialNumber.Name = "textBoxSerialNumber";
             this.textBoxSerialNumber.Size = new System.Drawing.Size(234, 27);
             this.textBoxSerialNumber.TabIndex = 7;
-            this.textBoxSerialNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSerialNumber_KeyPress);
             // 
             // textBoxAcquisitionPrice
             // 
             this.textBoxAcquisitionPrice.Location = new System.Drawing.Point(15, 99);
+            this.textBoxAcquisitionPrice.MaxLength = 30;
             this.textBoxAcquisitionPrice.Name = "textBoxAcquisitionPrice";
             this.textBoxAcquisitionPrice.Size = new System.Drawing.Size(234, 27);
             this.textBoxAcquisitionPrice.TabIndex = 5;
+            this.textBoxAcquisitionPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAcquisitionPrice_KeyPress);
             // 
             // textBoxEquipmentName
             // 
             this.textBoxEquipmentName.Location = new System.Drawing.Point(15, 46);
+            this.textBoxEquipmentName.MaxLength = 30;
             this.textBoxEquipmentName.Name = "textBoxEquipmentName";
             this.textBoxEquipmentName.Size = new System.Drawing.Size(234, 27);
             this.textBoxEquipmentName.TabIndex = 1;
@@ -136,9 +140,9 @@ namespace InventoryControl
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(15, 235);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 20);
+            this.label4.Size = new System.Drawing.Size(147, 20);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Nome do Fabricante";
+            this.label4.Text = "Nome do Fabricante:";
             // 
             // label3
             // 
@@ -163,17 +167,17 @@ namespace InventoryControl
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 20);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nome do Equipamento:";
+            this.label1.Text = "Nome:";
             // 
             // FormEditEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 355);
+            this.ClientSize = new System.Drawing.Size(278, 355);
             this.Controls.Add(this.groupBoxEditEquipment);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FormEditEquipment";
             this.Text = "Editar Equipamento";
@@ -193,10 +197,8 @@ namespace InventoryControl
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxManufacterName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerManufacturingDate;
-        private System.Windows.Forms.TextBox textBoxerialNumber;
         private System.Windows.Forms.TextBox textBoxSerialNumber;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;

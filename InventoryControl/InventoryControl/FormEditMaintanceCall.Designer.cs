@@ -80,6 +80,7 @@ namespace InventoryControl
             // textBoxDescriptionName
             // 
             this.textBoxDescriptionName.Location = new System.Drawing.Point(15, 99);
+            this.textBoxDescriptionName.MaxLength = 30;
             this.textBoxDescriptionName.Name = "textBoxDescriptionName";
             this.textBoxDescriptionName.Size = new System.Drawing.Size(234, 27);
             this.textBoxDescriptionName.TabIndex = 5;
@@ -87,6 +88,7 @@ namespace InventoryControl
             // textBoxTitleName
             // 
             this.textBoxTitleName.Location = new System.Drawing.Point(15, 46);
+            this.textBoxTitleName.MaxLength = 30;
             this.textBoxTitleName.Name = "textBoxTitleName";
             this.textBoxTitleName.Size = new System.Drawing.Size(234, 27);
             this.textBoxTitleName.TabIndex = 1;
@@ -153,7 +155,7 @@ namespace InventoryControl
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 297);
             this.Controls.Add(this.groupBoxEditMaintanceCall);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FormEditMaintanceCall";
             this.Text = "Editar Manutenção";
