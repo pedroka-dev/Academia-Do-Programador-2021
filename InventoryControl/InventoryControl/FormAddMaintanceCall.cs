@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using InventoryControlModel;
 
@@ -18,7 +14,7 @@ namespace InventoryControl
 
         public void PopulateComboBox(List<Equipment> ListEquip)
         {
-            var bindingSource1 = new BindingSource();
+            BindingSource bindingSource1 = new BindingSource();
             bindingSource1.DataSource = ListEquip;
 
             comboBoxEquipment.DataSource = bindingSource1.DataSource;

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using InventoryControlModel;
 
@@ -41,8 +36,7 @@ namespace InventoryControl
                     try
                     {
                         string equipmentName = textBoxEquipmentName.Text;
-                        float acquisitionPrice;
-                        if (!float.TryParse(textBoxAcquisitionPrice.Text, out acquisitionPrice))
+                        if (!float.TryParse(textBoxAcquisitionPrice.Text, out float acquisitionPrice))
                             acquisitionPrice = 0;
                         string serialNumber = textBoxSerialNumber.Text;
                         DateTime manufacturingDate = dateTimePickerManufacturingDate.Value;

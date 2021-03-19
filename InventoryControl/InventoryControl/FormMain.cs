@@ -10,16 +10,17 @@ namespace InventoryControl
     public partial class FormMain : Form
     {
         private List<Equipment> ListEquipment;
-        private List<MaintenanceCall> ListMaintenanceCall = new List<MaintenanceCall>();
-
+        private List<MaintenanceCall> ListMaintenanceCall;
 
         public FormMain()
         {
             InitializeComponent();
 
             ListEquipment = DeserializeJson<Equipment>("ListEquipment");
+            ListMaintenanceCall = DeserializeJson<MaintenanceCall>("ListMaintenanceCall");
 
             UpdateGridEquipment();
+            UpdateGridMaintenanceCall();
         }
 
         public void AddEquipment(Equipment equipment, int? optionalIndex = null)
@@ -63,26 +64,44 @@ namespace InventoryControl
 
         public void UpdateGridMaintenanceCall()
         {
-            dataGridViewMaintanceCall.Rows.Clear();
-            foreach (MaintenanceCall maintenance in ListMaintenanceCall)
+            if (ListMaintenanceCall != null)
             {
-                string daysOpen = (DateTime.Now - maintenance.OpeningDate).Days.ToString();
-                dataGridViewMaintanceCall.Rows.Add(maintenance.TitleName, maintenance.Equipment.EquipmentName, maintenance.OpeningDate.ToString(), daysOpen);
+                SerializeJson(ListMaintenanceCall, "ListMaintenanceCall");
+                dataGridViewMaintanceCall.Rows.Clear();
+                foreach (MaintenanceCall maintenance in ListMaintenanceCall)
+                {
+                    string daysOpen = (DateTime.Now - maintenance.OpeningDate).Days.ToString();
+                    dataGridViewMaintanceCall.Rows.Add(maintenance.TitleName, maintenance.Equipment.EquipmentName, maintenance.OpeningDate.ToString(), daysOpen);
+                }
             }
         }
 
         public void SerializeJson<T>(List<T> listGeneric, string fileName)
         {
-            string jsonString = JsonConvert.SerializeObject(listGeneric);
-            File.WriteAllText(fileName + ".json", jsonString);
+            try
+            {
+                string jsonString = JsonConvert.SerializeObject(listGeneric);
+                File.WriteAllText(fileName + ".json", jsonString);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Erro na operação de Serialização de arquivo JSON: \n" + ex.Message+"\nCaso este erro persista, abra o aplicativo em modo Administrador.", "Exceção IOException Capturada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public List<T> DeserializeJson<T>(string fileName)
         {
-            if (File.Exists(fileName + ".json"))
+            try
             {
-                string jsonString = File.ReadAllText(fileName + ".json");
-                return JsonConvert.DeserializeObject<List<T>>(jsonString);
+                if (File.Exists(fileName + ".json"))
+                {
+                    string jsonString = File.ReadAllText(fileName + ".json");
+                    return JsonConvert.DeserializeObject<List<T>>(jsonString);
+                }
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Erro na operação de Deserialização de arquivo JSON: \n" + ex.Message+ "\nCaso este erro persista, abra o aplicativo em modo Administrador.", "Exceção IOException Capturada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return new List<T>();

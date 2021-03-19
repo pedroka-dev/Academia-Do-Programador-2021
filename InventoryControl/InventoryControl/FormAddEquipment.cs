@@ -26,8 +26,7 @@ namespace InventoryControl
                     try
                     {
                         string equipmentName = textBoxEquipmentName.Text;
-                        float acquisitionPrice;
-                        if (!float.TryParse(textBoxAcquisitionPrice.Text, out acquisitionPrice))
+                        if (!float.TryParse(textBoxAcquisitionPrice.Text, out float acquisitionPrice))
                             acquisitionPrice = 0;
                         string serialNumber = textBoxSerialNumber.Text;
                         DateTime manufacturingDate = dateTimePickerManufacturingDate.Value;
