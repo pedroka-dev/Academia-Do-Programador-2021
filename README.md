@@ -1,5 +1,40 @@
-# Introdução do Aplicativo
+# Introdução
 O InventoryControl é um aplicativo WindowsForm desenvolvido em C# para a 2a Etapa do Processo Seletivo da Academia do Programador 2021. Ele permite o registro, visualização, edição e exclusão de equipamentos e seus respectivos chamados de manutenção. Este aplicativo possuí persistencia de dados através de serialização / deserialização de arquivos JSON.
+
+
+# Screenshots - Controle de Equipamentos
+  - Equipamentos Cadastrados:
+
+    ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/equipamentos%20cadastrados.JPG?token=AMEQONH46H72VENE75RCSFTALZABG)
+
+  - Adicionar novo Equipamento:
+
+    ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/adicionar%20equipamento.JPG?token=AMEQONGLWA27BU26W5DWWJTALZADA)
+
+  - Editar Equipamento existente:
+
+    ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/editar%20equipamento.JPG?token=AMEQONEBWDB57QDOS7LFVSTALZAEC)
+
+  - Excluir Equipamento existente:
+  
+    ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/excluir%20equipamento.JPG?token=AMEQONFXW5IGIOKRG7REYUTALZAG4)
+    
+# Screenshots - Controle de Chamados de Manutenção
+  - Chamados de Manutenção Cadastrados:
+
+    ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/chamados%20de%20manutenção%20cadastrados%20.JPG?token=AMEQONGD6DOYJAINGWDWO6LALZALA)
+
+  - Adicionar novo Chamado de Manutenção:
+
+    ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/adcionar%20chamado%20de%20manutenção.JPG?token=AMEQONBVFG7CUHHIVIZCOJTALZAMC)
+
+  - Editar Equipamento existente:
+
+    ![alt text](https://raw.githubusercontent.com/pedro-ca/AcademiaDoProgramador2021/main/Imagens/editar%20chamado%20de%20manutenção.JPG?token=AMEQONHN4LNGZ6BGPV7XWXTALZANG)
+
+  - Excluir Equipamento existente:
+  
+    ![alt text](https://github.com/pedro-ca/AcademiaDoProgramador2021/blob/main/Imagens/excluir%20chamado%20de%20manutenção.JPG)
 
 # Organização do Projeto
 O desenvolvimento do projeto foi planejados baseado no sistema de Issues disponibilizados pelo Github, que neste projeto foram utilizados como cartões de User Stories. Certas conveções foram seguidas a risca, como por exemplo:
