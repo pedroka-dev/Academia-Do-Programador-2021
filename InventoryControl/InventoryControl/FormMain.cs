@@ -69,7 +69,20 @@ namespace InventoryControl
 
         private void buttonDeleteEquipment_Click(object sender, System.EventArgs e)
         {
-
+            if (dataGridViewEquipment.CurrentCell != null)
+            {
+                DialogResult dialogResult = MessageBox.Show("Tem certeza que quer excluir o Equipamento selecionado?", "Confirmação Necessária", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int listIndex = dataGridViewEquipment.CurrentCell.RowIndex;
+                    ListEquipment.RemoveAt(listIndex);
+                    UpdateGridEquipment();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione ao menos um Equipamento antes de tentar excluir um item.", "Operação Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void buttonAddMaintanceCall_Click(object sender, System.EventArgs e)
@@ -93,6 +106,20 @@ namespace InventoryControl
 
         private void buttonDeleteMaintanceCall_Click(object sender, System.EventArgs e)
         {
+            if (dataGridViewMaintanceCall.CurrentCell != null)
+            {
+                DialogResult dialogResult = MessageBox.Show("Tem certeza que quer excluir o Chamado de Manutenção selecionado?", "Confirmação Necessária", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int listIndex = dataGridViewMaintanceCall.CurrentCell.RowIndex;
+                    ListMaintenanceCall.RemoveAt(listIndex);
+                    UpdateGridMaintenanceCall();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione ao menos um Chamado de Manutenção antes de tentar excluir um item.", "Operação Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
     }

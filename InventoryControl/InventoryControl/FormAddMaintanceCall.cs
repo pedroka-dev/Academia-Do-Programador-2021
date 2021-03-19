@@ -38,7 +38,7 @@ namespace InventoryControl
             {
                 if (comboBoxEquipment.SelectedValue != null)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja adicionar um novo Chamado de Manutenção?", "Confirmação necessária.", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja adicionar um novo Chamado de Manutenção?", "Confirmação Necessária", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
                     {
                         try
@@ -62,7 +62,7 @@ namespace InventoryControl
                 }
                 else
                 {
-                    MessageBox.Show("Selecione ao menos um Equipamento antes de adicionar novo Chamado de Manutenção.\nCaso não exista nenhum, adicione um Equipamento novo primeiro.", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Selecione um Equipamento válido antes de adicionar novo Chamado de Manutenção.\nCaso não exista nenhum, cadastre um Equipamento novo primeiro.", "Dados Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else

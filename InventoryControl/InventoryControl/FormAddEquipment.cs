@@ -20,7 +20,7 @@ namespace InventoryControl
         {
             if (!string.IsNullOrEmpty(textBoxEquipmentName.Text) && !string.IsNullOrEmpty(textBoxAcquisitionPrice.Text) && !string.IsNullOrEmpty(textBoxSerialNumber.Text) && !string.IsNullOrEmpty(textBoxManufacterName.Text))
             {
-                DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja adicionar um novo Equipamento?", "Confirmação necessária.", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja adicionar um novo Equipamento?", "Confirmação Necessária", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
                     try
@@ -47,7 +47,7 @@ namespace InventoryControl
             }
             else
             {
-                MessageBox.Show("Preencha todos os campos antes de adicionar novo Equipamento.", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha todos os campos antes de adicionar novo Equipamento.", "Dados Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

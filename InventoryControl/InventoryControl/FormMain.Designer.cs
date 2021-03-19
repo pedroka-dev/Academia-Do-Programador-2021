@@ -203,7 +203,7 @@ namespace InventoryControl
             this.groupBoxMaintanceCall.Size = new System.Drawing.Size(705, 431);
             this.groupBoxMaintanceCall.TabIndex = 2;
             this.groupBoxMaintanceCall.TabStop = false;
-            this.groupBoxMaintanceCall.Text = "Chamadas de Manutenção Cadastradas";
+            this.groupBoxMaintanceCall.Text = "Chamados de Manutenção Cadastradas";
             // 
             // buttonEditMaintanceCall
             // 
