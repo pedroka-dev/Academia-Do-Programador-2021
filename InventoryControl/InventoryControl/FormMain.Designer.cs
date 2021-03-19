@@ -42,6 +42,9 @@ namespace InventoryControl
             this.buttonDeleteMaintanceCall = new System.Windows.Forms.Button();
             this.buttonAddMaintanceCall = new System.Windows.Forms.Button();
             this.dataGridViewMaintanceCall = new System.Windows.Forms.DataGridView();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl.SuspendLayout();
             this.tabPageEquipment.SuspendLayout();
             this.groupBoxEquipment.SuspendLayout();
@@ -125,9 +128,14 @@ namespace InventoryControl
             this.dataGridViewEquipment.AllowUserToResizeColumns = false;
             this.dataGridViewEquipment.AllowUserToResizeRows = false;
             this.dataGridViewEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEquipment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnName,
+            this.ColumnSerialNumber,
+            this.ColumnManufacturerName});
             this.dataGridViewEquipment.Location = new System.Drawing.Point(11, 26);
             this.dataGridViewEquipment.Name = "dataGridViewEquipment";
             this.dataGridViewEquipment.ReadOnly = true;
+            this.dataGridViewEquipment.RowHeadersVisible = false;
             this.dataGridViewEquipment.RowHeadersWidth = 51;
             this.dataGridViewEquipment.RowTemplate.Height = 29;
             this.dataGridViewEquipment.Size = new System.Drawing.Size(683, 339);
@@ -205,6 +213,32 @@ namespace InventoryControl
             this.dataGridViewMaintanceCall.Size = new System.Drawing.Size(683, 339);
             this.dataGridViewMaintanceCall.TabIndex = 1;
             // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnName.HeaderText = "Nome";
+            this.ColumnName.MinimumWidth = 6;
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Width = 226;
+            // 
+            // ColumnSerialNumber
+            // 
+            this.ColumnSerialNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnSerialNumber.HeaderText = "Número de Serial";
+            this.ColumnSerialNumber.MinimumWidth = 6;
+            this.ColumnSerialNumber.Name = "ColumnSerialNumber";
+            this.ColumnSerialNumber.ReadOnly = true;
+            this.ColumnSerialNumber.Width = 226;
+            // 
+            // ColumnManufacturerName
+            // 
+            this.ColumnManufacturerName.HeaderText = "Nome do Fabricante";
+            this.ColumnManufacturerName.MinimumWidth = 6;
+            this.ColumnManufacturerName.Name = "ColumnManufacturerName";
+            this.ColumnManufacturerName.ReadOnly = true;
+            this.ColumnManufacturerName.Width = 228;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -241,6 +275,9 @@ namespace InventoryControl
         private System.Windows.Forms.Button buttonDeleteMaintanceCall;
         private System.Windows.Forms.Button buttonAddMaintanceCall;
         private System.Windows.Forms.DataGridView dataGridViewMaintanceCall;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSerialNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnManufacturerName;
     }
 }
 

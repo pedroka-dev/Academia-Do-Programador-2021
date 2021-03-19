@@ -1,10 +1,13 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using InventoryControlModel;
 
 namespace InventoryControl
 {
     public partial class FormMain : Form
     {
+        public List<Equipment> ListEquipment = new List<Equipment>();
+
         public FormMain()
         {
             InitializeComponent();
@@ -12,12 +15,23 @@ namespace InventoryControl
 
         public void AddEquipment(Equipment equipment)
         {
-            MessageBox.Show("Equipment=" + equipment.EquipmentName);        //debug
+            ListEquipment.Add(equipment);
+            UpdateGridEquipment();
+            //MessageBox.Show("Equipment=" + equipment.EquipmentName);        //debug
         }
 
         public void AddMaintenanceCall(MaintenanceCall maintenanceCall)
         {
             MessageBox.Show("MaintenanceCall=" + maintenanceCall.TitleName);        //debug
+        }
+
+        public void UpdateGridEquipment()
+        {
+            dataGridViewEquipment.Rows.Clear();
+            foreach (Equipment equip in ListEquipment)
+            {
+                dataGridViewEquipment.Rows.Add(equip.EquipmentName, equip.SerialNumber, equip.ManufacturerName);
+            }
         }
 
         private void buttonAddEquipment_Click(object sender, System.EventArgs e)
@@ -62,11 +76,6 @@ namespace InventoryControl
         }
 
         private void buttonDeleteMaintanceCall_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewEquipment_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

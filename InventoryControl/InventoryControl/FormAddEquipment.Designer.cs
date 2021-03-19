@@ -71,21 +71,21 @@ namespace InventoryControl
             this.textBoxManufacterName.Location = new System.Drawing.Point(15, 258);
             this.textBoxManufacterName.Name = "textBoxManufacterName";
             this.textBoxManufacterName.Size = new System.Drawing.Size(234, 27);
-            this.textBoxManufacterName.TabIndex = 9;
+            this.textBoxManufacterName.TabIndex = 5;
             // 
             // dateTimePickerManufacturingDate
             // 
             this.dateTimePickerManufacturingDate.Location = new System.Drawing.Point(15, 205);
             this.dateTimePickerManufacturingDate.Name = "dateTimePickerManufacturingDate";
             this.dateTimePickerManufacturingDate.Size = new System.Drawing.Size(234, 27);
-            this.dateTimePickerManufacturingDate.TabIndex = 11;
+            this.dateTimePickerManufacturingDate.TabIndex = 4;
             // 
             // textBoxSerialNumber
             // 
             this.textBoxSerialNumber.Location = new System.Drawing.Point(15, 152);
             this.textBoxSerialNumber.Name = "textBoxSerialNumber";
             this.textBoxSerialNumber.Size = new System.Drawing.Size(234, 27);
-            this.textBoxSerialNumber.TabIndex = 7;
+            this.textBoxSerialNumber.TabIndex = 3;
             this.textBoxSerialNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSerialNumber_KeyPress);
             // 
             // textBoxAcquisitionPrice
@@ -93,7 +93,7 @@ namespace InventoryControl
             this.textBoxAcquisitionPrice.Location = new System.Drawing.Point(15, 99);
             this.textBoxAcquisitionPrice.Name = "textBoxAcquisitionPrice";
             this.textBoxAcquisitionPrice.Size = new System.Drawing.Size(234, 27);
-            this.textBoxAcquisitionPrice.TabIndex = 5;
+            this.textBoxAcquisitionPrice.TabIndex = 2;
             // 
             // textBoxEquipmentName
             // 
@@ -107,7 +107,7 @@ namespace InventoryControl
             this.buttonConfirm.Location = new System.Drawing.Point(15, 296);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(94, 29);
-            this.buttonConfirm.TabIndex = 13;
+            this.buttonConfirm.TabIndex = 6;
             this.buttonConfirm.Text = "Confirmar";
             this.buttonConfirm.UseVisualStyleBackColor = true;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
@@ -117,7 +117,7 @@ namespace InventoryControl
             this.buttonCancel.Location = new System.Drawing.Point(155, 296);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancel.TabIndex = 12;
+            this.buttonCancel.TabIndex = 7;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
