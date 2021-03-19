@@ -7,8 +7,8 @@ namespace InventoryControl
 {
     public partial class FormMain : Form
     {
-        public List<Equipment> ListEquipment = new List<Equipment>();
-        public List<MaintenanceCall> ListMaintenanceCall = new List<MaintenanceCall>();
+        private List<Equipment> ListEquipment = new List<Equipment>();
+        private List<MaintenanceCall> ListMaintenanceCall = new List<MaintenanceCall>();
 
 
         public FormMain()
@@ -16,18 +16,30 @@ namespace InventoryControl
             InitializeComponent();
         }
 
-        public void AddEquipment(Equipment equipment)
+        public void AddEquipment(Equipment equipment, int? optionalIndex = null)
         {
-            ListEquipment.Add(equipment);
+            if (optionalIndex == null)
+            {
+                ListEquipment.Add(equipment);
+            }
+            else
+            {
+                ListEquipment[optionalIndex.GetValueOrDefault()] = equipment;
+            }
             UpdateGridEquipment();
-            //MessageBox.Show("Equipment=" + equipment.EquipmentName);        //debug
         }
 
-        public void AddMaintenanceCall(MaintenanceCall maintenanceCall)
+        public void AddMaintenanceCall(MaintenanceCall maintenanceCall, int? optionalIndex = null)
         {
-            ListMaintenanceCall.Add(maintenanceCall);
+            if (optionalIndex == null)
+            {
+                ListMaintenanceCall.Add(maintenanceCall);
+            }
+            else
+            {
+                ListMaintenanceCall[optionalIndex.GetValueOrDefault()] = maintenanceCall;
+            }
             UpdateGridMaintenanceCall();
-            //MessageBox.Show("MaintenanceCall=" + maintenanceCall.TitleName);        //debug
         }
 
         public void UpdateGridEquipment()
@@ -63,7 +75,7 @@ namespace InventoryControl
             if (dataGridViewEquipment.CurrentCell != null)
             {
                 int listIndex = dataGridViewEquipment.CurrentCell.RowIndex;
-                FormEditEquipment screenEditEquipment = new FormEditEquipment(ListEquipment[listIndex])
+                FormEditEquipment screenEditEquipment = new FormEditEquipment(ListEquipment[listIndex], listIndex)
                 {
                     Owner = this
                 };
@@ -108,7 +120,7 @@ namespace InventoryControl
             if (dataGridViewMaintanceCall.CurrentCell != null)
             {
                 int listIndex = dataGridViewMaintanceCall.CurrentCell.RowIndex;
-                FormEditMaintanceCall screenEditMaintanceCall = new FormEditMaintanceCall(ListMaintenanceCall[listIndex])
+                FormEditMaintanceCall screenEditMaintanceCall = new FormEditMaintanceCall(ListMaintenanceCall[listIndex], listIndex)
                 {
                     Owner = this
                 };
