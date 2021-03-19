@@ -67,7 +67,7 @@ namespace InventoryControl
             {
                 Owner = this
             };
-            screenAddEquipment.Show();
+            screenAddEquipment.ShowDialog();
         }
 
         private void buttonEditEquipment_Click(object sender, System.EventArgs e)
@@ -79,7 +79,7 @@ namespace InventoryControl
                 {
                     Owner = this
                 };
-                screenEditEquipment.Show();
+                screenEditEquipment.ShowDialog();
             }
             else
             {
@@ -111,8 +111,8 @@ namespace InventoryControl
             {
                 Owner = this
             };
-            screenAddMaintanceCall.Show();
             screenAddMaintanceCall.PopulateComboBox(ListEquipment);
+            screenAddMaintanceCall.ShowDialog();
         }
 
         private void buttonEditMaintanceCall_Click(object sender, System.EventArgs e)
@@ -124,8 +124,8 @@ namespace InventoryControl
                 {
                     Owner = this
                 };
-                screenEditMaintanceCall.Show();
                 screenEditMaintanceCall.PopulateComboBox(ListEquipment);
+                screenEditMaintanceCall.ShowDialog();
             }
             else
             {
