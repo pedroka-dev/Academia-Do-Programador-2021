@@ -29,6 +29,7 @@ namespace InventoryControl
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageEquipment = new System.Windows.Forms.TabPage();
             this.groupBoxEquipment = new System.Windows.Forms.GroupBox();
@@ -310,6 +311,7 @@ namespace InventoryControl
             this.ClientSize = new System.Drawing.Size(743, 495);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "Controle de Invetário";
